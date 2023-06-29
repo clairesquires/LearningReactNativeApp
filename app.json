@@ -1,5 +1,6 @@
 {
   "expo": {
+    "owner": "claires-theodo",
     "name": "ExpoApp",
     "slug": "ExpoApp",
     "version": "1.0.0",
@@ -15,16 +16,29 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.clairestheodo.expoapp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.claires_theodo.expoapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5f9b02ff-6e94-4a1f-95a6-3500c05ff0c3"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/5f9b02ff-6e94-4a1f-95a6-3500c05ff0c3"
     }
   }
 }
