@@ -3,46 +3,27 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-function HomeScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>This is my home screen :)</Text>
-      <Button
-        title="See my profile"
-        onPress={() => navigation.navigate("Profile")}
-      />
-    </View>
-  );
-}
+const HomeScreen = () => (
+  <View style={styles.container}>
+    <Text style={styles.text}>This is my home screen :)</Text>
+  </View>
+);
 
-function ProfileScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Here is your profile</Text>
-    </View>
-  );
-}
+const ProfileScreen = () => (
+  <View style={styles.container}>
+    <Text style={styles.text}>Here is your profile</Text>
+  </View>
+);
 
-// const Tab = createBottomTabNavigator();
-
-// function MyTabs() {
-//   return (
-//     <Tab.Navigator>
-//       <Tab.Screen name="Home" component={HomeScreen} />
-//       <Tab.Screen name="Profile" component={ProfileScreen} />
-//     </Tab.Navigator>
-//   );
-// }
-
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Profile" component={ProfileScreen} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
