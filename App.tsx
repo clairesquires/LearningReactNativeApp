@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>This is my home screen :)</Text>
+      <Text style={styles.text}>This is my home screen :)</Text>
       <Button
         title="See my profile"
         onPress={() => navigation.navigate("Profile")}
@@ -17,10 +18,21 @@ function HomeScreen({ navigation }) {
 function ProfileScreen() {
   return (
     <View style={styles.container}>
-      <Text>Here is your profile</Text>
+      <Text style={styles.text}>Here is your profile</Text>
     </View>
   );
 }
+
+// const Tab = createBottomTabNavigator();
+
+// function MyTabs() {
+//   return (
+//     <Tab.Navigator>
+//       <Tab.Screen name="Home" component={HomeScreen} />
+//       <Tab.Screen name="Profile" component={ProfileScreen} />
+//     </Tab.Navigator>
+//   );
+// }
 
 const Stack = createNativeStackNavigator();
 
@@ -41,5 +53,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  text: {
+    fontSize: 30,
   },
 });
