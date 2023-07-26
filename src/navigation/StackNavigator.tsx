@@ -3,7 +3,13 @@ import { HomeScreen } from "../screens/HomeScreen";
 import { ProfileScreen } from "../screens/ProfileScreen";
 import { SettingsScreen } from "../screens/SettingsScreen";
 
-const Stack = createNativeStackNavigator();
+type MainStackNavigator = {
+  Home: undefined;
+  Profile: undefined;
+  Settings: undefined;
+};
+
+const Stack = createNativeStackNavigator<MainStackNavigator>();
 
 export const MainStackNavigator = () => (
   <Stack.Navigator

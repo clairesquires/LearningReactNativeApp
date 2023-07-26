@@ -1,7 +1,12 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MainStackNavigator, SettingsStackNavigator } from "./StackNavigator";
 
-const Tab = createBottomTabNavigator();
+type TabNavigator = {
+  Home: undefined;
+  Settings: undefined;
+};
+
+const Tab = createBottomTabNavigator<TabNavigator>();
 
 export const TabNavigator = () => (
   <Tab.Navigator

@@ -3,7 +3,12 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { TabNavigator } from "./TabNavigator";
 import { SettingsStackNavigator } from "./StackNavigator";
 
-const Drawer = createDrawerNavigator();
+type DrawerNavigator = {
+  Home: undefined;
+  Settings: undefined;
+};
+
+const Drawer = createDrawerNavigator<DrawerNavigator>();
 
 export const DrawerNavigator = () => (
   <Drawer.Navigator>
