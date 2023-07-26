@@ -42,5 +42,12 @@
   "private": true,
   "eslintConfig": {
     "extends": "universe/native"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "prettier src --write",
+      "eslint src --fix",
+      "git add"
+    ]
   }
 }
