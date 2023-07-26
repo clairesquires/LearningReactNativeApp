@@ -1,18 +1,14 @@
-import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
-import { createDrawerNavigator } from "@react-navigation/drawer";
-import { HomeScreen } from "../screens/HomeScreen";
-import { ProfileScreen } from "../screens/ProfileScreen";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { DrawerNavigator } from "./DrawerNavigator";
+import { TabNavigator } from "./TabNavigator";
 
-const Drawer = createDrawerNavigator();
+const Tab = createBottomTabNavigator();
 
 export function Navigation() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator>
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Profile" component={ProfileScreen} />
-      </Drawer.Navigator>
+      <DrawerNavigator />
     </NavigationContainer>
   );
 }
