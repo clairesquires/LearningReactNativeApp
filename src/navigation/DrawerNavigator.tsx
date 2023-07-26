@@ -1,7 +1,7 @@
-import "react-native-gesture-handler";
-import { createDrawerNavigator } from "@react-navigation/drawer";
-import { TabNavigator } from "./TabNavigator";
-import { SettingsStackNavigator } from "./StackNavigator";
+import 'react-native-gesture-handler';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { TabNavigator } from './TabNavigator';
+import { SettingsStackNavigator } from './StackNavigator';
 
 type DrawerNavigator = {
   Home: undefined;
