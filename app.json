@@ -38,7 +38,7 @@
     },
     "updates": {
       "url": "https://u.expo.dev/5f9b02ff-6e94-4a1f-95a6-3500c05ff0c3"
-    }
-  },
-  "scheme": "my-app"
+    },
+    "scheme": "my-app"
+  }
 }
