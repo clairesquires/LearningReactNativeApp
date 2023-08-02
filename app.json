@@ -25,7 +25,8 @@
       "package": "com.claires_theodo.expoapp"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
     },
     "extra": {
       "eas": {
@@ -37,14 +38,7 @@
     },
     "updates": {
       "url": "https://u.expo.dev/5f9b02ff-6e94-4a1f-95a6-3500c05ff0c3"
-    },
-    "plugins": [
-      [
-        "expo-updates",
-        {
-          "username": "clairesquires"
-        }
-      ]
-    ]
-  }
+    }
+  },
+  "scheme": "my-app"
 }
