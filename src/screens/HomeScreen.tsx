@@ -4,7 +4,7 @@ import { Link } from 'expo-router';
 
 export const HomeScreen = () => (
   <View style={[styles.container, styles.home]}>
-    <Text style={styles.text}>This is my home screen :)</Text>
+    <Text style={styles.h1}>This is my home screen :)</Text>
     <Link href="/profile" style={styles.button}>
       <Text style={styles.buttonText}>See profile</Text>
     </Link>
@@ -15,7 +15,10 @@ export const HomeScreen = () => (
       <Text style={styles.buttonText}>See not overflowing</Text>
     </Link>
     <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
-      <Text style={styles.buttonText}>Get an alert</Text>
+      <Text style={styles.buttonText}>My pressable</Text>
     </Pressable>
+    <Link href="/list" style={styles.button}>
+      <Text style={styles.buttonText}>My list</Text>
+    </Link>
   </View>
 );

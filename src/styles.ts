@@ -7,8 +7,11 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 10,
   },
-  text: {
+  h1: {
     fontSize: 30,
+  },
+  text: {
+    fontSize: 20,
   },
   home: {
     backgroundColor: '#FFC6FF',
